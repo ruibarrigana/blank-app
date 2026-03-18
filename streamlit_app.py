@@ -17,6 +17,7 @@ from streamlit_gsheets import GSheetsConnection
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 df = conn.read(
+    spreadsheet="comprovativo (2)",
     worksheet="comprovativo (2)",
     ttl="10m",
     usecols=range(7),
